@@ -14,7 +14,7 @@ class ProductDAO {
         $listProduct = array();
 
         while ($row = $result->fetch_assoc()) { 
-            array_push($listStudent, new ProductModel($row));
+            array_push($listProduct, new ProductModel($row));
         }
 
         return $listProduct;
@@ -38,7 +38,7 @@ class ProductDAO {
     }
 
     public static function findAll() {
-        $sql = "SELECT * FROM SAN_PHAM";
+        $sql = "SELECT * FROM PRODUCT";
         return ProductDAO::queryAll($sql);
     }
     

@@ -23,17 +23,17 @@
         <?php if (isset($user)) echo"<p> WELCOME  $user->$name</p>"; ?>
         <div class="row">
             <div class="col-md-2 left mt-4">
-                <h3>Loại Mặt Hàng:</h3>
+                <!-- <h3>Loại Mặt Hàng:</h3>
                 <ul class="list-group mb-2 ml-2 brand-list">
 
-                    <?php
+                    <!-- <?php
                         foreach ($ds_thuonghieu as $thuonghieu) {
                             echo "<li class='list-group-item'>
                                 <input type='checkbox' name='thuonghieu' value='$thuonghieu->code' id='$thuonghieu->id'>
                                 $thuonghieu->name
                             </li>";
                         }
-                    ?>
+                    ?> -->
                     <!-- <li class="list-group-item">
                         <input type="checkbox" name="a" id="">
                         Cà Phê Âu-Mỹ
@@ -41,8 +41,8 @@
                     <li class="list-group-item">
                         <input type="checkbox" name="a" id="">
                         Trà Sữa
-                    </li> -->
-                </ul>
+                    </li>
+                </ul> -->
 
                 <h3>Sắp Xếp Theo:</h3>
                 <ul class="list-group mb-2 ml-2">
@@ -64,14 +64,14 @@
 
                     <?php
 
-                        foreach ($ds_sanpham as $sp) {
+                        foreach ($list_product as $product) {
                             echo "<div class='col-lg-4 col-sm-6 item-item mb-3 product-item'>
                                 <div class='card'>
                                     <img class='card-img-top pic' src='https://capherangxay.vn/wp-content/uploads/2018/03/cong-thuc-pha-che-ca-phe-phin-ngon-tuyet-hao-2.jpg' alt='Card image cap'>
                                     <div class='card-body'>
-                                    <h5 class='card-title'>$sp->name</h5>
-                                    <p class='card-text'>$sp->description</p>
-                                    <p class='card-text'>$sp->price</p>
+                                    <h5 class='card-title'>$product->name</h5>
+                                    <p class='card-text'>$product->description</p>
+                                    <p class='card-text'>$product->price</p>
                                     <a href='#' class='btn btn-primary'>Mua Ngay</a>
                                     </div>
                                 </div>
