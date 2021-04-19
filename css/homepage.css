@@ -1,0 +1,15 @@
+.mr-left{
+    margin-left: 1rem;
+}
+
+.pic{
+    height: 22rem;
+    Weight: 15rem;
+}
+
+.product-item p.card-text {
+    height: 4.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
