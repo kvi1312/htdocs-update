@@ -22,7 +22,7 @@ INSERT INTO PRODUCT(P_ID, P_NAME, P_SIZE, P_MATERIAL, P_PRICE, P_DES, P_STATUS) 
    ('TS5', 'TRÀ SỮA OLONG', 'M', 'Sữa tươi, chân trâu và syrup Olong', '50000', 'thức uống này là hương vị đậm đà hơn. Ngay cả vị chát nhẹ ở đầu lưỡi cũng khiến người ta mê mẩn. Vị ngọt hậu phía dưới cuống họng càng lắng đọng dư vị của đồ uống cao cấp.', 'ĐANG KINH DOANH'),
    ('TS2', 'TRÀ SỮA CHÂN TRÂU ĐƯỜNG ĐEN', 'L', 'Sữa tươi, chân trâu đường đen và hồng trà', '65000', 'Thức uống anh em với họ nhà trà sữa nhưng sữa tươi trân châu đường đen có thành phần mới lạ, khác biệt so với trà sữa truyền thống, đó là sự kết hợp giữa sữa tươi thanh trùng không đường và viên trân châu thơm đậm vị syrup đường đen.', 'ĐANG KINH DOANH'),
    ('TS4', 'TRÀ SỮA MATCHA', 'L', 'Sữa tươi, chân trâu và bột Matcha', '65000', 'Trà sữa matcha thích hợp dành cho các bạn muốn một nước ngon lành nhưng không khiến bạn tăng cân và lại tốt cho da', 'ĐANG KINH DOANH'),
-   ('TS6', 'TRÀ SỮA OLONG', 'L', 'Sữa tươi, chân trâu và syrup Olong', '65000', 'thức uống này là hương vị đậm đà hơn. Ngay cả vị chát nhẹ ở đầu lưỡi cũng khiến người ta mê mẩn. Vị ngọt hậu phía dưới cuống họng càng lắng đọng dư vị của đồ uống cao cấp.', 'ĐANG KINH DOANH'),
+   ('TS6', 'TRÀ SỮA OLONG', 'L', 'Sữa tươi, chân trâu và syrup Olong', '65000', 'thức uống này là hương vị đậm đà hơn. Ngay cả vị chát nhẹ ở đầu lưỡi cũng khiến người ta mê mẩn. Vị ngọt hậu phía dưới cuống họng càng lắng đọng dư vị của đồ uống cao cấp.', 'ĐANG KINH DOANH');
    
    
    

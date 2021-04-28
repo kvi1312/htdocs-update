@@ -1,0 +1,76 @@
+function getProductList() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.open('GET', '/htdocs-update/api/product.php?action=list', true);
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
+    xhttp.send();
+}
+
+function postDeleteProduct() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.open('POST', '/htdocs-update/api/product.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
+    xhttp.send('action=delete');
+}
+
+// $(function){
+//     $("#btn-list").click(getProductList);
+//     $("#btn-del").click(postDeleteProduct);
+// }
+
+
+function getProductListJq() {
+    $.get( "/htdocs-update/api/product.php?action=list", function( data ) {
+        let jsob = JSON.parse(data);
+        console.log(jsob);
+    });
+}
+
+function callApiSearch(searchText) {
+    $.get( `/htdocs-update/api/product.php?action=list&queryString=${searchText}`, function( data ) {
+        let jsob = JSON.parse(data);
+        //update UI
+        refreshProductGrid(jsob);
+    });
+}
+
+function refreshProductGrid(products) {
+    $('#product-grid').empty();
+    for (let product of products) {
+        $('#product-grid').append(`<div class='col-lg-4 col-sm-6 item-item mb-3 product-item'>
+            <div class='card'>
+                <img class='card-img-top pic' src='https://capherangxay.vn/wp-content/uploads/2018/03/cong-thuc-pha-che-ca-phe-phin-ngon-tuyet-hao-2.jpg' alt='Card image cap'>
+                <div class='card-body'>
+                <h5 class='card-title'>${product.name}</h5>
+                <p class='card-text'>${product.description}</p>
+                <p class='card-text'>${product.price}</p></p>
+                <a href='#' class='btn btn-primary'>Mua Ngay</a>
+                </div>
+            </div>
+        </div>`);
+    }
+}
+
+function postDeleteProductJq() {
+    let formData = {
+        action: 'delete',
+    }
+    $.post( "/htdocs-update/api/product.php", formData, function( data ) {
+        console.log(data);
+    });
+}
+
+$(function(){
+    $('input.search_input').keyup(function() {
+        let searchText = $(this).val();
+        callApiSearch(searchText);
+    });
+})

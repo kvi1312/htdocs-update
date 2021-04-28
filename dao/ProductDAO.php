@@ -42,4 +42,10 @@ class ProductDAO {
         return ProductDAO::queryAll($sql);
     }
     
+
+    public static function FindQueryString($queryString){
+        $sql ="SELECT * FROM product
+            WHERE P_NAME LIKE '%$queryString%'";
+            return ProductDAO::queryAll($sql);
+    }
 }

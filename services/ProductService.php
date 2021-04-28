@@ -8,6 +8,12 @@ class ProductService {
         return ProductDAO::findAll();
     }
 
+
+    public static function searchProduct($key) {
+        return ProductDAO::findQueryString($key);
+    }
+
+
     // public static function findAll() {
     //     $cthds = CTDH_DAO::findByMaHd($mahd);
     //     ....
