@@ -49,18 +49,17 @@ class UserDAO {
 
     public static function findAllByEmailAndPassword($email, $password) {
         $sql = "SELECT * FROM USER WHERE U_EMAIL= '$email' AND U_PASSWORD='$password'";
-        return UserDAO::queryAll($sql);
+        return UserDAO::queryTop($sql);
     }
 
     public static function save($user){
         
         global $conn;
-
-        if($user->id ==NULL) {
-            $sql= "INSERT INTO USER(U_EMAIL, U_PASSWORD,U_NAME, U_PHONE, U_ADDRESS, U_ROLE) 
-                VALUE('$user->email','$user->password','$user->name','$user->phone','$user->address','$user->role')";
-
+        if($user->id == NULL) {
+            $sql= "INSERT INTO user(U_EMAIL, U_PASSWORD,U_NAME1, U_PHONE, U_ROLE) VALUES('$user->email','$user->password','$user->fullname','$user->phone','user')";
+            echo $sql;
             $result = $conn->query($sql); 
+            print_r($result);
             return $result;
         }
 

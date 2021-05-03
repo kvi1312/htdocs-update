@@ -1,13 +1,7 @@
 <?php
-
-session_start();
-
 include_once './services/ProductService.php';
-
-if (isset($_SESSION['user'])){
-    $user=$_SESSION['user'];
-}
-
+include_once './models/UserModel.php';
+include './prehandle/getCurrentUser.php';
 
 $list_product = ProductService::findAll();
 

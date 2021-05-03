@@ -21,20 +21,12 @@
 
     <main class="container-fluid">
     
-        <?php if (isset($user)) echo"<p> WELCOME  $user->$name</p>"; ?>
+        <?php if (isset($user)) echo"<p> WELCOME  $user->fullname!</p>"; ?>
         <div class="row">
             <div class="col-md-2 left mt-4">
                 <h3>Loại Mặt Hàng:</h3>
                 <ul class="list-group mb-2 ml-2 brand-list">
 
-                    <!-- <?php
-                        foreach ($ds_thuonghieu as $thuonghieu) {
-                            echo "<li class='list-group-item'>
-                                <input type='checkbox' name='thuonghieu' value='$thuonghieu->code' id='$thuonghieu->id'>
-                                $thuonghieu->name
-                            </li>";
-                        }
-                    ?> -->
                      <li class="list-group-item">
                         <input type="checkbox" name="a" id="">
                         Cà Phê Âu-Mỹ
@@ -169,8 +161,6 @@
                 </div>   
             </div>
 
-            <button class="btn- btn-primay">list </button>
-            <button class="btn- btn-primay">del </button>
     </main>
     <!-- End Content -->
 

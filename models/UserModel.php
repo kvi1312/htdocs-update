@@ -1,21 +1,22 @@
 <?php
-class ProductModel {
+class UserModel {
    
     public $id;
-    public $name;
+    public $fullname;
     public $email;
     public $password;
-    public $address;
+    // public $address;
     public $role;
     public $phone;
 
     // $data la mot array
     function __construct($data) {
+        if ($data == null) return;
         $this->id = $data['U_ID'];
-        $this->name = $data['U_NAME'];
+        $this->fullname = $data['U_NAME1'];
         $this->email= $data['U_EMAIL'];
         $this->password = $data['U_PASSWORD'];
-        $this->address = $data['U_ADDRESS'];
+        // $this->address = $data['U_ADDRESS'];
         $this->role = $data['U_ROLE'];
         $this->phone= $data['U_PHONE'];
     }
