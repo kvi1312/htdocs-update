@@ -1,11 +1,11 @@
 <!-- Footer -->
-<footer class="section footer-classic context-dark bg-image pt-4" style="background: #000026;">
-    <div class="container">
+<footer class="section footer-classic context-dark bg-image pt-4" style="background: #a0c4ff;"> 
+    <div class="container con-cl">
         <div class="row">
             <div class="col-md-6">
                 <div class="pl-5">
-                    <a class="brand" href="index.php">
-                        <img class="brand-logo-light" src="https://iweb.tatthanh.com.vn/pic/3/service/images/logo-cafe-dep(23).jpg" alt="" width="100px" height="100px">
+                    <a class="brand" href="">
+                        <img class="brand-logo-light" src="/htdocs-update/assert/logo.png" alt="" width="110px" height="110px">
                     </a>
                     <p>Công ty TNHH MTV KL HighLand.</p>
                     <p>Chuyên cung cấp các loại sản phẩm giải khát chất lượng cao và đạt chuẩn yêu cầu bảo đảm vệ thực phẩm</p>

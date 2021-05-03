@@ -19,31 +19,31 @@
 
     <!-- Content--> 
 
-    <main class="container-fluid">
+    <main class="container-fluid bg">
     
-        <?php if (isset($user)) echo"<p> WELCOME  $user->fullname!</p>"; ?>
+    <?php if (isset($user)) echo"<p> WELCOME  $user->fullname!</p>"; ?>
         <div class="row">
-            <div class="col-md-2 left mt-4">
+            <div class="col-md-2 left mt-4 " >
                 <h3>Loại Mặt Hàng:</h3>
-                <ul class="list-group mb-2 ml-2 brand-list">
+                <ul class="list-group mb-2 ml-2 brand-list" >
 
-                     <li class="list-group-item">
+                     <li class="list-group-item check-cl" >
                         <input type="checkbox" name="a" id="">
                         Cà Phê Âu-Mỹ
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item check-cl">
                         <input type="checkbox" name="a" id="">
                         Trà Sữa
                     </li>
                 </ul>
 
                 <h3>Sắp Xếp Theo:</h3>
-                <ul class="list-group mb-2 ml-2">
-                    <li class="list-group-item">
+                <ul class="list-group mb-2 ml-2 ">
+                    <li class="list-group-item check-cl">
                         <input type="radio" name="a" id="">
                         Giá Thành
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item check-cl">
                         <input type="radio" name="a" id="">
                         Bán Chạy
                     </li>
@@ -58,8 +58,8 @@
                     <?php
 
                         foreach ($list_product as $product) {
-                            echo "<div class='col-lg-4 col-sm-6 item-item mb-3 product-item'>
-                                <div class='card'>
+                            echo "<div class='col-lg-4 col-sm-6 item-item mb-3 product-item '>
+                                <div class='card card-bg'>
                                     <img class='card-img-top pic' src='https://capherangxay.vn/wp-content/uploads/2018/03/cong-thuc-pha-che-ca-phe-phin-ngon-tuyet-hao-2.jpg' alt='Card image cap'>
                                     <div class='card-body'>
                                     <h5 class='card-title'>$product->name</h5>

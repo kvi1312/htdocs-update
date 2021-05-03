@@ -12,4 +12,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.check-cl{
+    background-color: #D7E3FC; 
+}
 
+.bg{
+    background-color: #EDF2FB;
+}
+
+.card-bg{
+    background-color: #E2EAFC;
+}
