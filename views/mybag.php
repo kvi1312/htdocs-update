@@ -12,45 +12,8 @@
 </head>
 <body>
 
-    <?php include './common/header.php'; ?>
+    <?php include dirname(__DIR__).'/views/common/header.php'; ?>
 
-    <!-- Header -->
-
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
-        <a class="navbar-brand mg-r" href="#">
-            <img src="https://iweb.tatthanh.com.vn/pic/3/service/images/logo-cafe-dep(23).jpg" class="web-logo" alt="web logo">
-        </a>
-        <div class="d-flex align-items-center"> -->
-            <!-- Menu Bar -->
-            <!-- <ul class="navbar-nav mr-auto font-size ">
-                <li class="nav-item active mg-r">
-                    <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item mg-r">
-                    <a class="nav-link" href="#">Khuyến Mãi</a>
-                </li>
-                <li class="nav-item mg-r">
-                    <a class="nav-link" href="#">Chính Sách</a>
-                </li>
-                </li>
-            </ul> -->
-
-            <!-- End Menu Bar -->
-        <!-- </div>
-        <div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
-                <div class="searchbar mr-3">
-                    <input class="search_input" type="text" name="" placeholder="Search...">
-                    <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-                </div>
-            </div>
-        </div>
-    </nav> -->
-
-    <!-- End Header -->
 <div class="container"> 
     <table id="cart" class="table table-hover table-condensed"> 
         <thead> 
@@ -80,7 +43,7 @@
                 <td data-th="Subtotal" class="text-center">200.000 đ</td> 
                 <td class="actions" data-th="">
                     <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i></button> 
-                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                 </td> 
             </tr> 
 
@@ -101,7 +64,7 @@
                 <td data-th="Subtotal" class="text-center">300.000 đ</td> 
                 <td class="actions" data-th="">
                     <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i></button> 
-                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                 </td> 
             </tr> 
         </tbody>
@@ -113,7 +76,7 @@
             </tr> 
 
             <tr> 
-                <td><a href="http://hocwebgiare.com/" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+                <td><a href="/htdocs-update/index.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
                     </td> 
                 <td colspan="2" class="hidden-xs"></td> 
                 <td class="hidden-xs text-center"><strong>Tổng tiền 500.000 đ</strong></td> 
@@ -124,7 +87,7 @@
     </table>
 </div>
 
-<?php include './common/footer.php'; ?>
+<?php include dirname(__DIR__).'/views/common/footer.php'; ?>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

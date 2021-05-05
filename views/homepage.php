@@ -59,13 +59,13 @@
 
                         foreach ($list_product as $product) {
                             echo "<div class='col-lg-4 col-sm-6 item-item mb-3 product-item '>
-                                <div class='card card-bg'>
+                                <div class='card'>
                                     <img class='card-img-top pic' src='https://capherangxay.vn/wp-content/uploads/2018/03/cong-thuc-pha-che-ca-phe-phin-ngon-tuyet-hao-2.jpg' alt='Card image cap'>
                                     <div class='card-body'>
                                     <h5 class='card-title'>$product->name</h5>
                                     <p class='card-text'>$product->description</p>
                                     <p class='card-text'>$product->price</p>
-                                    <a href='#' class='btn btn-primary'>Mua Ngay</a>
+                                    <button class='btn btn-primary'>Thêm vào giỏ</button>
                                     </div>
                                 </div>
                             </div>";
@@ -73,91 +73,7 @@
 
                     ?>
 
-                    
-                    <!-- <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://doctormuoi.vn/wp-content/uploads/2021/01/cach-pha-cafe-phin-618x550.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">CÀ PHÊ PHIN</h5>
-                            <p class="card-text">Được trích xuất từ 100% cà phê nguyên chất, với cách chế biến mang đậm bản sắc Việt Nam, khiến cho hương vị đậm đà</p>
-                            <a href="#" class="btn btn-primary">Mua Ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://hpcvietblog.files.wordpress.com/2019/05/bac-xiu-la-gi.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">CÀ PHÊ BẠC XỈU</h5>
-                            <p class="card-text">Một loại nước uống nâng cấp của cà phê sữa, ngọt hơn và nhiều sữa hơn</p>
-                            <a href="#" class="btn btn-primary">MUA NGAY</a>
-                            </div>
-                        </div>
-                    </div> 
-
-                    <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://icaphe.vn/wp-content/uploads/2019/12/3g1.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">AMERICANO</h5>
-                            <p class="card-text">Americano là một phong cách cà phê chuẩn bị bằng cách thêm nước nóng vào espresso, điều này làm cà phê có độ đậm tương tự, nhưng hương vị lại khác, giống cà phê phin</p>
-                            <a href="#" class="btn btn-primary">Mua Ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://img.timviecdaubep.com/2020/08/espresso-2.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">ESPRESSO</h5>
-                            <p class="card-text">Espresso là một phương pháp pha cà phê có nguồn gốc từ Ý, trong đó một lượng nhỏ nước sôi gần như bị đè dưới áp lực qua hạt cà phê nghiền</p>
-                            <a href="#" class="btn btn-primary">Mua Ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://www.hocvienamthuc.com/wp-content/uploads/bfi_thumb/huong-dan-cach-lam-ca-phe-capuchino-ngon-tai-nha-6wvb7zbi12yft7d89c5d8w1r1jfyild78ltkrubw3sg.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">CAPUCHINO</h5>
-                            <p class="card-text">à phê cappuccino bao gồm ba phần đều nhau: cà phê espresso pha với một lượng nước gấp đôi (espresso lungo), sữa nóng và sữa sủi bọt. Để hoàn thiện khẩu vị, người ta thường rải lên trên tách cà phê cappuccino một ít bột ca cao và/hay bột quế. </p>
-                            <a href="#" class="btn btn-primary">MUA NGAY</a>
-                            </div>
-                        </div>
-                    </div> 
-
-                    <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://www.cet.edu.vn/wp-content/uploads/2020/02/sua-tuoi-tran-chau-duong-den.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">TRÀ SỮA CHÂN TRÂU ĐƯỜNG ĐEN</h5>
-                            <p class="card-text">Thức uống anh em với họ nhà trà sữa nhưng sữa tươi trân châu đường đen có thành phần mới lạ, khác biệt so với trà sữa truyền thống, đó là sự kết hợp giữa sữa tươi thanh trùng không đường và viên trân châu thơm đậm vị syrup đường đen.</p>
-                            <a href="#" class="btn btn-primary">Mua Ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://file.hstatic.net/1000135323/file/tra-sua-matcha-tran-chau_6d28290729074c45916b985b8f284c13_1024x1024.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">TRÀ SỮA MATCHA</h5>
-                            <p class="card-text">Trà sữa matcha thích hợp dành cho các bạn muốn một nước ngon lành nhưng không khiến bạn tăng cân và lại tốt cho da.</p>
-                            <a href="#" class="btn btn-primary">Mua Ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 item-item mb-3 product-item">
-                        <div class="card">
-                            <img class="card-img-top pic" src="https://images.foody.vn/res/g106/1051960/prof/s640x400/foody-upload-api-foody-mobile-7-201021093622.jpg" alt="Card image cap">
-                            <div class="card-body">
-                            <h5 class="card-title">TRÀ SỮA OLONG</h5>
-                            <p class="card-text">thức uống này là hương vị đậm đà hơn. Ngay cả vị chát nhẹ ở đầu lưỡi cũng khiến người ta mê mẩn. Vị ngọt hậu phía dưới cuống họng càng lắng đọng dư vị của đồ uống cao cấp.
-
-                            </p>
-                            <a href="#" class="btn btn-primary">MUA NGAY</a>
-                            </div>
-                        </div>
-                    </div>  -->
+                
                 </div>   
             </div>
 

@@ -2,8 +2,8 @@
 /* Header */
 
 .web-logo {
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
 }
 .font-size{
     font-size: 40px;
@@ -33,7 +33,7 @@
 }
 
 .search_input{
-    color: white;
+    color: black;
     border: 0;
     outline: 0;
     background: none;

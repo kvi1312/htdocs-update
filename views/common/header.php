@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between" style="background: #C1D3FE;" >
     <a class="navbar-brand" href="/htdocs-update/index.php" >
-        <img src="/htdocs-update/assert/logo.png" class="web-logo" alt="web logo"> 
+        <img src="/htdocs-update/assert/lg.png" class="web-logo" alt="web logo"> 
     </a>
     <div class="d-flex align-items-center">
         <!-- Menu Bar -->
@@ -33,18 +33,22 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     
-                <!-- <?php
-                        if (isset($user)) {
-                            echo "<a href='/view-cart.php' class='btn btn-success my-2 my-sm-0 mr-3' type='button'><i class='fas fa-shopping-cart'></i></a>
-                            <a href='/logout.php' class='btn btn-success my-2 my-sm-0' type='button'>Đăng Xuất</a>";
-                        } else {
-                            echo "<a href='/login.php' class='btn btn-success my-2 my-sm-0 mr-3' type='button'>Đăng Nhập</a>
-                            <a href='/login.php?action=register' class='btn btn-outline-success my-2 my-sm-0' type='button'>Đăng Ký</a>";
-                        }
-                    ?> -->
 
-                    <a href="/htdocs-update/login.php" class="btn btn-primary my-2 my-sm-0 mr-3"" type="button">Đăng Nhập</a>
-                    <a href="/htdocs-update/login.php?action=register" class="btn btn-info my-2 my-sm-0" type="button">Đăng Ký</a>
+
+                    <?php
+                     if(isset($user)){
+
+                        echo "<a href='/htdocs-update/view-cart.php' class='btn btn-primary my-2 my-sm-0' type='button'><i class='fas fa-shopping-cart'></i></a>
+                        <a href='/htdocs-update/logout.php' class='btn btn-outline-success my-2 my-sm-0' type='button'>Đăng Xuất</a>";
+
+                        }else{
+                          echo"<a href='/htdocs-update/login.php' class='btn btn-primary my-2 my-sm-0 mr-3' type='button'>Đăng Nhập</a>
+                            <a href='/htdocs-update/login.php?action=register#' class='btn btn-info my-2 my-sm-0' type='button'>Đăng Ký</a>";
+                     }
+                    ?>
+
+
+
                 </li>
             </ul>
         </div>

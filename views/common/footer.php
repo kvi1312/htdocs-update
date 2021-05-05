@@ -5,7 +5,7 @@
             <div class="col-md-6">
                 <div class="pl-5">
                     <a class="brand" href="">
-                        <img class="brand-logo-light" src="/htdocs-update/assert/logo.png" alt="" width="110px" height="110px">
+                        <img class="brand-logo-light" src="/htdocs-update/assert/lg.png" alt="" width="110px" height="110px">
                     </a>
                     <p>Công ty TNHH MTV KL HighLand.</p>
                     <p>Chuyên cung cấp các loại sản phẩm giải khát chất lượng cao và đạt chuẩn yêu cầu bảo đảm vệ thực phẩm</p>
