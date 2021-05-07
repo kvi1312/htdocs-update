@@ -1,5 +1,5 @@
 <?php
-class ProductModel {
+class InvoiceModel {
    
     public $id;
     // public $cagetory;

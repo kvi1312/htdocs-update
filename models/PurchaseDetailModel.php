@@ -1,12 +1,11 @@
 <?php
-class ProductModel {
+class PurchaseDetailModel {
    
     public $id;
     public $productId;
     public $amount;
     public $price;
-   
-    
+
 	// P_ID	I_ID	PD_AMOUNT	PD_PRICE
 
 

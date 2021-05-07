@@ -27,51 +27,39 @@
         </thead> 
 
         <tbody>
-            <tr> 
-                <td data-th="Product">
-                    <div class="row"> 
-                        <div class="col-sm-2 hidden-xs">
-                            <img src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/shopping_cart/images/090.jpg" alt="Sản phẩm 1" class="img-responsive" width="100"></div> 
-                        <div class="col-sm-10">
-                            <h4 class="nomargin">Sản phẩm 1</h4> 
-                                <p>Mô tả của sản phẩm 1</p> 
-                        </div> 
-                    </div> 
-                </td> 
-                <td data-th="Price">200.000 đ</td> 
-                <td data-th="Quantity"><input class="form-control text-center" value="1" type="number"></td> 
-                <td data-th="Subtotal" class="text-center">200.000 đ</td> 
-                <td class="actions" data-th="">
-                    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i></button> 
-                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                </td> 
-            </tr> 
+        <?php
+            if (isset($details)) {
+                foreach ($details as $index => $detail) {
+                    $product = $products[$index];
+                    $subtotal = $detail->amount * $detail->price;
+                    echo " <tr> 
+                        <td data-th='Product'>
+                            <div class='row'> 
+                                <div class='col-sm-2 hidden-xs'>
+                                    <img src='$product->thumbnail' alt='Sản phẩm 1' class='img-responsive' width='100'></div> 
+                                <div class='col-sm-10'>
+                                    <h4 class='nomargin'>$product->name</h4> 
+                                        <p>$product->description</p> 
+                                </div> 
+                            </div> 
+                        </td> 
+                        <td data-th='Price'>$detail->price đ</td> 
+                        <td data-th='Quantity'><input productId='$detail->productId' class='form-control text-center amount-input' value='$detail->amount' type='number' min=1></td> 
+                        <td data-th='Subtotal' class='text-center'>$subtotal đ</td> 
+                        <td class='actions' data-th=''>
+                            <button productId='$detail->productId' class='btn btn-danger btn-sm btn-delete'><i class='fa fa-trash'></i></button>
+                        </td> 
+                    </tr> ";
+                }
+            } else {
+                echo "<tr>
+                    <td>Giỏ hàng rỗng</td>
+                </tr>";
+            }
+        ?>
+             
 
-            <tr> 
-                <td data-th="Product"> 
-                    <div class="row">
-                        <div class="col-sm-2 hidden-xs"><img src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/shopping_cart/images/174.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
-                        </div>
-                    <div class="col-sm-10"> 
-                        <h4 class="nomargin">Sản phẩm 2</h4> 
-                        <p>Mô tả của sản phẩm 2</p> 
-                    </div> 
-                    </div> 
-                </td>
-
-                <td data-th="Price">300.000 đ</td> 
-                <td data-th="Quantity"><input class="form-control text-center" value="1" type="number"></td> 
-                <td data-th="Subtotal" class="text-center">300.000 đ</td> 
-                <td class="actions" data-th="">
-                    <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i></button> 
-                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                </td> 
-            </tr> 
-        </tbody>
-        
-        <tfoot> 
-
-            <tr class="visible-xs"> 
+            <!-- <tr class="visible-xs"> 
                 <td class="text-center"><strong>Tổng 200.000 đ</strong></td> 
             </tr> 
 
@@ -82,7 +70,7 @@
                 <td class="hidden-xs text-center"><strong>Tổng tiền 500.000 đ</strong></td> 
                 <td><a href="http://hocwebgiare.com/" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
                     </td> 
-            </tr> 
+            </tr> -->
         </tfoot> 
     </table>
 </div>
@@ -92,7 +80,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="../script/common.js"></script>
-<script src="../script/product-list.js"></script>
+<script src="/htdocs-update/script/common.js"></script>
+<script src="/htdocs-update/script/product-list.js"></script>
 </body>
 </html>

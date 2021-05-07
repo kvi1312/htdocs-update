@@ -8,7 +8,9 @@ class ProductService {
         return ProductDAO::findAll();
     }
 
-
+    public static function findById($id){
+        return ProductDAO::findById($id);
+    }
     public static function searchProduct($key) {
         return ProductDAO::findQueryString($key);
     }

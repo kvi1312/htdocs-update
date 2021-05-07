@@ -60,12 +60,12 @@
                         foreach ($list_product as $product) {
                             echo "<div class='col-lg-4 col-sm-6 item-item mb-3 product-item '>
                                 <div class='card'>
-                                    <img class='card-img-top pic' src='https://capherangxay.vn/wp-content/uploads/2018/03/cong-thuc-pha-che-ca-phe-phin-ngon-tuyet-hao-2.jpg' alt='Card image cap'>
+                                    <img class='card-img-top pic' src='$product->thumbnail' alt='Card image cap'>
                                     <div class='card-body'>
                                     <h5 class='card-title'>$product->name</h5>
                                     <p class='card-text'>$product->description</p>
                                     <p class='card-text'>$product->price</p>
-                                    <button class='btn btn-primary'>Thêm vào giỏ</button>
+                                    <button productId='$product->id' class='btn btn-primary btn-add-to-cart'>Thêm vào giỏ</button>
                                     </div>
                                 </div>
                             </div>";

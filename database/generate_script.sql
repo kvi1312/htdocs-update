@@ -30,7 +30,7 @@ create table INVOICE
 (
    I_ID                 Bigint not null AUTO_INCREMENT,
    U_ID                 Bigint not null,
-   I_OPEN_TIME          time,
+   I_OPEN_TIME          datetime,
    I_CHECKOUT_TIME      datetime,
    I_STATUS             varchar(256),
    I_SHIPPING_ADDRESS   text,

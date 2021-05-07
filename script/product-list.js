@@ -52,7 +52,7 @@ function refreshProductGrid(products) {
                 <h5 class='card-title'>${product.name}</h5>
                 <p class='card-text'>${product.description}</p>
                 <p class='card-text'>${product.price}</p></p>
-                <a href='#' class='btn btn-primary'>Mua Ngay</a>
+                <button productId='${product.id}' class='btn btn-primary btn-add-top-cart'>Thêm vào giỏ</button>
                 </div>
             </div>
         </div>`);
@@ -73,4 +73,16 @@ $(function(){
         let searchText = $(this).val();
         callApiSearch(searchText);
     });
+})
+
+$(function(){
+    $('.btn-add-to-cart').click(function(){
+        $.post( `/htdocs-update/api/invoice.php`, {
+            'action':'add-to-cart',
+            'productId':$(this).attr('productId'),
+            'amount':1,
+        }, function(data){
+            console.log(data); 
+        });
+    })
 })
