@@ -1,7 +1,7 @@
 INSERT into CAGETORY(C_ID, C_NAME, C_CODE) VALUES
    ('1', 'tra sua', 'tra-sua'),
    ('2', 'ca phe', 'ca-phe'),
-   ('1', 'ca phe my', 'ca-phe-my');
+   ('3', 'ca phe my', 'ca-phe-my');
 
 INSERT INTO PRODUCT(C_ID, P_NAME, P_SIZE, P_MATERIAL, P_PRICE, P_DES, P_STATUS,P_THUMBNAIL) VALUES 
    ('2', 'CAFE PHIN', 'M', 'Cà phê tự nhiên', '40000', 'Được trích xuất từ 100% cà phê nguyên chất, với cách chế biến mang đậm bản sắc Việt Nam, khiến cho hương vị đậm đà', 'ĐANG KINH DOANH','/htdocs-update/assert/cafevn/cafe-phin.jpg'),

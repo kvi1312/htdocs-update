@@ -10,7 +10,7 @@ class ProductModel {
     public $status;
     public $description;
     public $thumbnail;
-    public $size;
+    
     
 
     // $data la mot array
@@ -25,7 +25,7 @@ class ProductModel {
         $this->price = $data['P_PRICE'];
         $this->status = $data['P_STATUS'];
         $this->description = $data['P_DES'];
-        $this->size = $data['P_SIZE'];
+        
         $this->thumbnail = isset($data['P_THUMBNAIL'])? $data['P_THUMBNAIL']: $DEFAULT_IMAGE;
     }
 
