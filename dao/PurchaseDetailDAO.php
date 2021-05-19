@@ -48,9 +48,9 @@ class PurchaseDetailDAO {
         $product = ProductDAO::findById($productId);
         $price = $product->price;
         if($detail != null){
-            $sql = "UPDATE PURCHASE_DETAIL SET PD_AMOUNT = $amount WHERE I_ID = $invoiceId AND P_ID= $productId";
+            $sql = "UPDATE purchase_detail SET PD_AMOUNT = $amount WHERE I_ID = $invoiceId AND P_ID= $productId";
         }ELSE{
-            $sql = "INSERT INTO PURCHASE_DETAIL(I_ID, P_ID, PD_AMOUNT, PD_PRICE) VALUE ($invoiceId, $productId, $amount, $price)";
+            $sql = "INSERT INTO purchase_detail(I_ID, P_ID, PD_AMOUNT, PD_PRICE) VALUE ($invoiceId, $productId, $amount, $price)";
         }
         $result =$conn-> query($sql);
         if ($result == TRUE){
@@ -65,5 +65,18 @@ class PurchaseDetailDAO {
     public static function findAllByInvoice($invoiceId){
         $sql = "SELECT * FROM PURCHASE_DETAIL WHERE I_ID = $invoiceId";
         return PurchaseDetailDAO::queryAll($sql);
+    }
+
+    public static function delete($invoiceId, $productId) {
+        global $conn;
+        $detail = PurchaseDetailDAO::findById($invoiceId, $productId);
+        $sql = "DELETE FROM purchase_detail WHERE I_ID = $invoiceId AND P_ID = $productId";
+        $result = $conn->query($sql);
+        if ($result == TRUE) {
+            return $detail;
+        } else {
+            // that bai
+            return null;
+        }
     }
 }

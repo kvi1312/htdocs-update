@@ -39,7 +39,7 @@
                      if(isset($user)){
 
                         echo "<a href='/htdocs-update/view-cart.php' class='btn btn-primary my-2 my-sm-0' type='button'><i class='fas fa-shopping-cart'></i></a>
-                        <a href='/htdocs-update/logout.php' class='btn btn-outline-success my-2 my-sm-0' type='button'>Đăng Xuất</a>";
+                        <a href='/htdocs-update/logout.php' class='btn btn-danger my-2 my-sm-0' type='button'>Đăng Xuất</a>";
 
                         }else{
                           echo"<a href='/htdocs-update/login.php' class='btn btn-primary my-2 my-sm-0 mr-3' type='button'>Đăng Nhập</a>

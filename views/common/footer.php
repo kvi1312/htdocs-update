@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="section footer-classic context-dark bg-image pt-4" style="background: #a0c4ff;"> 
+<footer class="section footer-classic context-dark bg-image pt-4 " style="background: #a0c4ff;"> 
     <div class="container con-cl">
         <div class="row">
             <div class="col-md-6">

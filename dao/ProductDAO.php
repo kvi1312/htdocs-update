@@ -42,14 +42,30 @@ class ProductDAO {
         return ProductDAO::queryTop($sql);
     }
 
+    public static function count() {
+        global $conn;
+        $sql = "SELECT COUNT(*) as nb FROM PRODUCT ";
+        $result = $conn-> query($sql);
+        if ($result ->num_rows >0){
+            $count_nb= $result ->fetch_assoc()['nb'];
+        }
+        return 0;
+    }
+
     public static function findAll() {
         $sql = "SELECT * FROM PRODUCT";
         return ProductDAO::queryAll($sql);
     }
     
+    public static function findAllLimit($offset, $limit) {
+        $sql = "SELECT * FROM PRODUCT LIMIT $limit OFFSET $offset";
+        return ProductDAO::queryAll($sql);
+    }
 
     public static function FindQueryString($queryString){
-        $sql ="SELECT * FROM product WHERE P_NAME LIKE '%$queryString%'";
+        $sql ="SELECT * FROM PRODUCT WHERE P_NAME LIKE '%$queryString%'";
             return ProductDAO::queryAll($sql);
     }
+
+    
 }

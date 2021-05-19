@@ -21,6 +21,25 @@ if (isset($_POST['action']) && $_POST['action'] == 'add-to-cart') {
     InvoiceService::addToCart($invoice->id, $productId, $amount);
 }
 
+if (isset($_POST['action']) && $_POST['action'] == 'change-amount') {
+    // print_r(($_POST));    
+    $invoice = InvoiceService::findCart();
+    if ($invoice == null){
+        $invoice = InvoiceService::createInvoice();
+    }
+    $productId = $_POST['productId'];
+    $amount = $_POST['amount'];
+    InvoiceService::setAmount($invoice->id, $productId, $amount);
+}
+
+if (isset($_POST['action']) && $_POST['action'] == 'delete-product') {
+    // print_r(($_POST));    
+    $invoice = InvoiceService::findCart();
+    // print_r($invoice);
+    $productId = $_POST['productId'];
+    InvoiceService::removeProduct($invoice->id, $productId);
+}
+
 // if (isset($_POST['action']) && $_POST['action'] == 'add to-cart') {
 //         $invoice = InvoiceService::findCart();
 //         InvoiceService::checkout($invoice->id);

@@ -7,3 +7,4 @@ if(session_id() == ''){
 if (isset($_SESSION['user'])) {
     $user = $_SESSION['user'];
 }
+

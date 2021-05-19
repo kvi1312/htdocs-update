@@ -51,6 +51,7 @@ create table PRODUCT
    P_PRICE              float(8,2),
    P_DES                varchar(572),
    P_STATUS             text,
+   P_THUMBNAIL          varchar(256),
    primary key (P_ID)
 );
 

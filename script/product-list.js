@@ -75,14 +75,31 @@ $(function(){
     });
 })
 
+function showNotification(message, color){
+    
+    $('#notificationContainer').append(
+        ` <div  class="alert alert-${color} alert-dismissible fade show mt-4 mr-4" role="alert">
+            ${message}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>`
+    );
+}
+
+function addToCart(productId){
+    $.post( `/htdocs-update/api/invoice.php`, {
+        'action':'add-to-cart',
+        'productId': productId,
+        'amount': 1,
+    }, function(data){
+        showNotification('Đã thêm vào giỏ!', 'success');
+    });
+}
+
 $(function(){
     $('.btn-add-to-cart').click(function(){
-        $.post( `/htdocs-update/api/invoice.php`, {
-            'action':'add-to-cart',
-            'productId':$(this).attr('productId'),
-            'amount':1,
-        }, function(data){
-            console.log(data); 
-        });
+            addToCart($(this).attr('productId'));
     })
 })
+

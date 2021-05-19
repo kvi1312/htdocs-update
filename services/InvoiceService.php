@@ -13,11 +13,19 @@ class InvoiceService {
     public static function addToCart($invoiceId, $productId, $amount) {
         $detail = PurchaseDetailDAO::findById($invoiceId, $productId);
         if ($detail != null) {
-            $oldAmount = $detail ->amount;
+            $oldAmount = $detail->amount;
             return PurchaseDetailDAO::save($invoiceId, $productId, $oldAmount + $amount);
         } else return PurchaseDetailDAO::save($invoiceId, $productId, $amount);
         
-    }    
+    } 
+    
+    public static function removeProduct($invoiceId, $productId) {
+        return PurchaseDetailDAO::delete($invoiceId, $productId);
+    }
+
+    public static function setAmount($invoiceId, $productId, $amount){
+        return PurchaseDetailDAO::save($invoiceId, $productId, $amount);
+    }
 
     public static function createInvoice() {
         return InvoiceDAO::createEmpty();
@@ -36,8 +44,13 @@ class InvoiceService {
         return PurchaseDetailDAO::findAllByInvoice($invoiceId);
     }
 
+    public static function checkout($invoiceId, $address, $total) {
+        return InvoiceDAO::close($invoiceId, $address, $total);
+    }
+
     // public static function checkout($invoiceId){
     //     $total = computeTotal($invoiceId)
     //     return InvoiceDAO::checkout($total);
     // }
 }
+

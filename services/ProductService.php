@@ -8,11 +8,22 @@ class ProductService {
         return ProductDAO::findAll();
     }
 
+    public static function findAllLimit($page, $limit) {
+        return ProductDAO::findAllLimit(($page-1)*$limit, $limit);
+    }
+
     public static function findById($id){
         return ProductDAO::findById($id);
     }
     public static function searchProduct($key) {
         return ProductDAO::findQueryString($key);
+    }
+
+    public static function findTotalPage($limit){
+        $product_count = ProductDAO::count();
+        $total_page = $product_count / $limit;
+        $total_page = (int) $total_page;
+        return $total_page + ((($product_count % $limit) > 0)? 1:0);
     }
 
 

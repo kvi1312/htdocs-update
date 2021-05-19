@@ -114,3 +114,9 @@ ul, ol {
 }
 
 /* End Footer */
+
+
+
+.card-bg {
+    background-image: linear-gradient(to right top, #9ed4eb, #9dcdf6, #abc3fb, #c3b6f8, #e0a7e9);
+}

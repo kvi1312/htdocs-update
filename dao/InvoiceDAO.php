@@ -68,4 +68,16 @@ class InvoiceDAO {
             return null;
         }
     }
+
+    public static function close($invoiceId, $address, $total) {
+        global $conn;
+        $sql = "UPDATE INVOICE SET I_CHECKOUT_TIME = CURDATE(), I_STATUS = 'closed', I_TOTAL = '$total', I_SHIPPING_ADDRESS = '$address' WHERE I_ID = $invoiceId";
+        $result = $conn->query($sql);
+        if ($result == TRUE) {
+            return InvoiceDAO::findById($invoiceId);
+        } else {
+            // that bai
+            return null;
+        }
+    }
 }
