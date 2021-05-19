@@ -77,7 +77,7 @@ create table USER
    U_PASSWORD           varchar(256),
    U_NAME               varchar(50) not null,
    U_PHONE              varchar(15) not null, 
-   U_ADDRESS            varchar(256) not null,
+   U_ADDRESS            varchar(256),
    U_ROLE               varchar(256),
    primary key (U_ID)
 );

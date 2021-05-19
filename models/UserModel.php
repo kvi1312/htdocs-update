@@ -13,7 +13,7 @@ class UserModel {
     function __construct($data) {
         if ($data == null) return;
         $this->id = $data['U_ID'];
-        $this->fullname = $data['U_NAME1'];
+        $this->fullname = $data['U_NAME'];
         $this->email= $data['U_EMAIL'];
         $this->password = $data['U_PASSWORD'];
         // $this->address = $data['U_ADDRESS'];

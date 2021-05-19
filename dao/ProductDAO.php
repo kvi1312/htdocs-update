@@ -42,12 +42,27 @@ class ProductDAO {
         return ProductDAO::queryTop($sql);
     }
 
+    public static function findAllByName($name) {
+        $sql = "SELECT * FROM PRODUCT WHERE P_NAME = '$name'";
+        return ProductDAO::queryAll($sql);
+    }
+
     public static function count() {
         global $conn;
         $sql = "SELECT COUNT(*) as nb FROM PRODUCT ";
         $result = $conn-> query($sql);
         if ($result ->num_rows >0){
-            $count_nb= $result ->fetch_assoc()['nb'];
+            return $result ->fetch_assoc()['nb'];
+        }
+        return 0;
+    }
+
+    public static function countGroupByName() {
+        global $conn;
+        $sql = "SELECT COUNT(*) as nb FROM PRODUCT GROUP BY P_NAME";
+        $result = $conn-> query($sql);
+        if ($result ->num_rows >0){
+            return $result ->fetch_assoc()['nb'];
         }
         return 0;
     }
@@ -58,7 +73,7 @@ class ProductDAO {
     }
     
     public static function findAllLimit($offset, $limit) {
-        $sql = "SELECT * FROM PRODUCT LIMIT $limit OFFSET $offset";
+        $sql = "SELECT * FROM PRODUCT group by P_NAME order by P_ID LIMIT $limit OFFSET $offset";
         return ProductDAO::queryAll($sql);
     }
 

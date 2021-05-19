@@ -13,17 +13,12 @@ $NB_PAGE_SHOW = 10;
 if(isset($_GET['page'])&& isset($_GET['limit'])){
     $page = $_GET['page'];
     $limit = $_GET['limit'];
-    $list_product = ProductService::findAllLimit();
-
-
 } else if (isset($_GET['page'])){
     $page = $_GET['page'];
     $limit = $DEFAULT_PAGING_LIMIT;
-
 } else if (isset($_GET['page'])){
     $page = 1;
     $limit = $_GET['limit'];
-
 } else {
     $page = 1;
     $limit = $DEFAULT_PAGING_LIMIT;

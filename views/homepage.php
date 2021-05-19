@@ -39,7 +39,10 @@
             <div class="col-md-2 left mt-4 " >
                 <h3>Loại Mặt Hàng:</h3>
                 <ul class="list-group mb-2 ml-2 brand-list" >
-
+                    <li class="list-group-item check-cl">
+                        <input type="checkbox" name="a" id="">
+                        Trà Sữa
+                    </li>
                      <li class="list-group-item check-cl" >
                         <input type="checkbox" name="a" id="">
                         Cà Phê Âu-Mỹ
@@ -72,6 +75,7 @@
 
                         foreach ($list_product as $product) {
                             echo "<div class='col-lg-4 col-sm-6 item-item mb-3 product-item '>
+                            <a href='/htdocs-update/product.php?id=$product->id'> 
                                 <div class='card'>
                                     <img class='card-img-top pic' src='$product->thumbnail' alt='Card image cap'>
                                     <div class='card-body'>
@@ -81,6 +85,7 @@
                                     <button productId='$product->id' class='btn btn-primary btn-add-to-cart'>Thêm vào giỏ</button>
                                     </div>
                                 </div>
+                            </a> 
                             </div>";
                         }
 

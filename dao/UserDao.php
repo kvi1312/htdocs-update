@@ -56,10 +56,10 @@ class UserDAO {
         
         global $conn;
         if($user->id == NULL) {
-            $sql= "INSERT INTO user(U_EMAIL, U_PASSWORD,U_NAME1, U_PHONE, U_ROLE) VALUES('$user->email','$user->password','$user->fullname','$user->phone','user')";
-            echo $sql;
+            $sql= "INSERT INTO user(U_EMAIL, U_PASSWORD,U_NAME, U_PHONE, U_ROLE) VALUES('$user->email','$user->password','$user->fullname','$user->phone','user')";
+            // echo $sql;
             $result = $conn->query($sql); 
-            print_r($result);
+            // print_r($result);
             return $result;
         }
 

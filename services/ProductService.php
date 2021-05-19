@@ -19,8 +19,12 @@ class ProductService {
         return ProductDAO::findQueryString($key);
     }
 
+    public static function getListSize($productName) {
+        return ProductDAO::findAllByName($productName);
+    }
+
     public static function findTotalPage($limit){
-        $product_count = ProductDAO::count();
+        $product_count = ProductDAO::countGroupByName();
         $total_page = $product_count / $limit;
         $total_page = (int) $total_page;
         return $total_page + ((($product_count % $limit) > 0)? 1:0);

@@ -98,7 +98,9 @@ function addToCart(productId){
 }
 
 $(function(){
-    $('.btn-add-to-cart').click(function(){
+    $('.btn-add-to-cart').click(function(event){
+        event.preventDefault();
+        event.stopPropagation();
             addToCart($(this).attr('productId'));
     })
 })
