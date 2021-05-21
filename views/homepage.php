@@ -101,7 +101,7 @@
                 <nav aria-label="Page navigation example" class="d-flex justify-content-center mb-3">
                     <ul class="pagination">
                         <?php
-                            $cagetory_param = isset($cagetory_code)? "cagetory= $cagetory_code": "";
+                            $cagetory_param = isset($cagetory_code)? "cagetory=$cagetory_code": "";
                             $disabled = ($page == 1)? 'disabled': '';
                             $prev_page = $page-1;
                             echo "<li class='page-item $disabled'>
