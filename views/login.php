@@ -72,16 +72,18 @@
                             Đăng Ký 
                     </h5>
                     <div class="card-body">
-                        <form id="signupform" action="" method="POST" class="form-horizontal" role="form">
+                    <form id="signupform" action="" method="POST" class="form-horizontal" role="form" novalidate  onsubmit="return validation()">
                             <input type="hidden" name="action" value="register">
                             <div class="form-group">
                                 <label for="email" class="control-label">Email</label>
                                 <input id="email" type="text" class="form-control" name="email">
+                                <div class="invalid-feedback email"></div>
                             </div>
                                 
                             <div class="form-group">
                                 <label for="fullname" class="control-label">Họ & Tên</label>
-                                <input id="fullnamme" type="text" class="form-control" name="fullname">
+                                <input id="fullname" type="text" class="form-control" name="fullname">
+                                <div class="invalid-feedback fullname"></div>
                             </div>
 
 
@@ -89,16 +91,25 @@
                             <div class="form-group">
                                 <label for="phone" class="control-label">Số Điện Thoại</label>
                                 <input id="phone" type="text" class="form-control" name="phone">
+                                <div class="invalid-feedback phone"></div>
                             </div>
 
                             <div class="form-group">
                                 <label for="birthday" class="control-label">Ngày Sinh</label>
                                 <input id="birthday" type="date" class="form-control" name="birthday">
+                                <div class="invalid-feedback birthday"></div>
                             </div>
 
                             <div class="form-group">
                                 <label for="password" class="control-label">Mật Khẩu</label>
-                                <input id="password" type="text" class="form-control" name="password">
+                                <input id="password" type="password" class="form-control" name="password">
+                                <div class="invalid-feedback password"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword" class="control-label">Xác Nhận Mật Khẩu</label>
+                                <input id="confirmPassword" type="password" class="form-control">
+                                <div class="invalid-feedback confirmPassword"></div>
                             </div>
                             
     
@@ -134,5 +145,7 @@
 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="/htdocs-update/vendor/moment.min.js"></script>
+    <script src="/htdocs-update/script/form-validation.js"></script>
 </body>
 </html>

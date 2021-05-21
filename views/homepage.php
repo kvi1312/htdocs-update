@@ -38,20 +38,25 @@
         <div class="row">
             <div class="col-md-2 left mt-4 " >
                 <h3>Loại Mặt Hàng:</h3>
-                <ul class="list-group mb-2 ml-2 brand-list" >
-                    <li class="list-group-item check-cl">
-                        <input type="checkbox" name="a" id="">
-                        Trà Sữa
-                    </li>
-                     <li class="list-group-item check-cl" >
-                        <input type="checkbox" name="a" id="">
-                        Cà Phê Âu-Mỹ
-                    </li>
-                    <li class="list-group-item check-cl">
-                        <input type="checkbox" name="a" id="">
-                        Trà Sữa
-                    </li>
-                </ul>
+
+                <ul class="list-group mb-2 ml-2 brand-list ">
+                    
+                <?php
+                        $checked = !isset($cagetory_code)? 'checked': '';
+                        echo "<a href='/htdocs-update/index.php'><li class='list-group-item check-cl'>
+                            <input type='checkbox' class='disabled-checkbox' $checked >
+                            Tất cả
+                        </li></a>";
+                    ?>
+                    <?php
+                        foreach ($list_cagetory as $cagetory) {
+                            $checked = (isset($cagetory_code) && $cagetory->code == $cagetory_code)? 'checked': '';
+                            echo "<a href='/htdocs-update/index.php?cagetory=$cagetory->code'><li class='list-group-item check-cl'>
+                                <input type='checkbox' class='disabled-checkbox' $checked >
+                                $cagetory->name
+                            </li></a>";
+                        }
+                    ?>
 
                 <h3>Sắp Xếp Theo:</h3>
                 <ul class="list-group mb-2 ml-2 ">
@@ -96,10 +101,11 @@
                 <nav aria-label="Page navigation example" class="d-flex justify-content-center mb-3">
                     <ul class="pagination">
                         <?php
+                            $cagetory_param = isset($cagetory_code)? "cagetory= $cagetory_code": "";
                             $disabled = ($page == 1)? 'disabled': '';
                             $prev_page = $page-1;
                             echo "<li class='page-item $disabled'>
-                                <a class='page-link' href='/index.php?page=$prev_page&limit=$limit' aria-label='Previous'>
+                                <a class='page-link' href='/htdocs-update/index.php?$cagetory_param&page=$prev_page&limit=$limit' aria-label='Previous'>
                                     <span aria-hidden='true'>«</span>
                                     <span class='sr-only'>Previous</span>
                                 </a>
@@ -109,31 +115,31 @@
                                 $temp_nb_show = (int)($NB_PAGE_SHOW / 2);
                                 for ($i = 1; $i <= $temp_nb_show; $i++) {
                                     $active = ($i == $page)? 'active': '';
-                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?page=$i&limit=$limit'>$i</a></li>";    
+                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?$cagetory_param&page=$i&limit=$limit'>$i</a></li>";    
                                 }
                                 if ($page > $temp_nb_show && $page <= $total_page - $temp_nb_show) {
                                     echo "<li class='page-item disabled'><a class='page-link' href='#'>...</a></li>";    
                                     $temp_mid_nb_show = (int)($temp_nb_show / 2);
                                     for ($i = $page - $temp_mid_nb_show; $i < $page ; $i++) {
                                         $active = ($i == $page)? 'active': '';
-                                        echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?page=$i&limit=$limit'>$i</a></li>";    
+                                        echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?$cagetory_param&page=$i&limit=$limit'>$i</a></li>";    
                                     }       
                                     $active = ($i == $page)? 'active': '';
-                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?page=$page&limit=$limit'>$page</a></li>";    
+                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?$cagetory_param&page=$page&limit=$limit'>$page</a></li>";    
                                     for ($i = $page + 1; $i <= $page + $temp_mid_nb_show; $i++) {
                                         $active = ($i == $page)? 'active': '';
-                                        echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?page=$i&limit=$limit'>$i</a></li>";    
+                                        echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?$cagetory_param&page=$i&limit=$limit'>$i</a></li>";    
                                     }
                                 }
                                 echo "<li class='page-item disabled'><a class='page-link' href='#'>...</a></li>";    
                                 for ($i = $total_page - $temp_nb_show + 1; $i <= $total_page ; $i++) {
                                     $active = ($i == $page)? 'active': '';
-                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?page=$i&limit=$limit'>$i</a></li>";    
+                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?$cagetory_param&page=$i&limit=$limit'>$i</a></li>";    
                                 }
                             } else {
                                 for ($i = 1; $i <= $total_page; $i++) {
                                     $active = ($i == $page)? 'active': '';
-                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?page=$i&limit=$limit'>$i</a></li>";    
+                                    echo "<li class='page-item $active'><a class='page-link' href='/htdocs-update/index.php?$cagetory_param&page=$i&limit=$limit'>$i</a></li>";    
                                 }
                             }
                         
@@ -142,7 +148,7 @@
                             $next_page = $page+1;
                             
                             echo "<li class='page-item $disabled'>
-                                <a class='page-link' href='/index.php?page=$next_page&limit=$limit' aria-label='Next'>
+                                <a class='page-link' href='/index.php?$cagetory_param&page=$next_page&limit=$limit' aria-label='Next'>
                                     <span aria-hidden='true'>»</span>
                                     <span class='sr-only'>Next</span>
                                 </a>
@@ -162,5 +168,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/htdocs-update/script/common.js"></script>
     <script src="/htdocs-update/script/product-list.js"></script>
+    <script>
+        $(function(){
+            $('.disabled-checkbox').click(function(event) {
+                event.preventDefault();
+            });
+        });
+    </script>
 </body>
 </html>

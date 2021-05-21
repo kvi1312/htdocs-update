@@ -49,7 +49,7 @@ class PurchaseDetailDAO {
         $price = $product->price;
         if($detail != null){
             $sql = "UPDATE purchase_detail SET PD_AMOUNT = $amount WHERE I_ID = $invoiceId AND P_ID= $productId";
-        }ELSE{
+        } else {
             $sql = "INSERT INTO purchase_detail(I_ID, P_ID, PD_AMOUNT, PD_PRICE) VALUE ($invoiceId, $productId, $amount, $price)";
         }
         $result =$conn-> query($sql);

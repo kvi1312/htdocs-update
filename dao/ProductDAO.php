@@ -59,12 +59,25 @@ class ProductDAO {
 
     public static function countGroupByName() {
         global $conn;
-        $sql = "SELECT COUNT(*) as nb FROM PRODUCT GROUP BY P_NAME";
+        $sql = "SELECT * FROM PRODUCT GROUP BY P_NAME";
         $result = $conn-> query($sql);
-        if ($result ->num_rows >0){
-            return $result ->fetch_assoc()['nb'];
+        $count=0;
+        while ($row = $result->fetch_assoc()) { 
+            $count++;
         }
-        return 0;
+        return $count;
+    }
+
+    public static function countByCagetoryGroupByName($cagetory) {
+        global $conn;
+        $cagetory_id= $cagetory->id;
+        $sql = "SELECT * FROM PRODUCT GROUP BY P_NAME having C_ID= $cagetory_id";
+        $result = $conn-> query($sql);
+        $count=0;
+        while ($row = $result->fetch_assoc()) { 
+            $count++;
+        }
+        return $count++;
     }
 
     public static function findAll() {
@@ -74,6 +87,12 @@ class ProductDAO {
     
     public static function findAllLimit($offset, $limit) {
         $sql = "SELECT * FROM PRODUCT group by P_NAME order by P_ID LIMIT $limit OFFSET $offset";
+        return ProductDAO::queryAll($sql);
+    }
+
+    public static function findAllByCagetoryLimit($cagetory, $offset, $limit) {
+        $cagetory_id = $cagetory->id;
+        $sql = "SELECT * FROM PRODUCT where c_id= $cagetory_id group by P_NAME order by P_ID LIMIT $limit OFFSET $offset";
         return ProductDAO::queryAll($sql);
     }
 

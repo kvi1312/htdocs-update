@@ -18,11 +18,11 @@
     <table id="cart" class="table table-hover table-condensed" style="background: rgb(223,255,255); background: linear-gradient(90deg, rgba(223,255,255,1) 10%, rgba(251,255,216,1) 76%);"> 
         <thead > 
             <tr> 
-                <th style="width:50%">Tên sản phẩm</th> 
+                <th style="width:50%">Tên sản phẩm</th>
+                <th style="width:10">Size</th>
                 <th style="width:10%">Giá</th> 
                 <th style="width:8%">Số lượng</th> 
-                <th style="width:22%" class="text-center">Thành tiền</th> 
-                <th style="width:10%"> </th> 
+                <th style="width:12%" class="text-center">Thành tiền</th> 
             </tr> 
         </thead> 
 
@@ -38,11 +38,11 @@
                                 <div class='col-sm-2 hidden-xs'>
                                     <img src='$product->thumbnail' alt='Sản phẩm 1' class='img-responsive' width='80px'></div> 
                                 <div class='col-sm-10'>
-                                    <h4 class='nomargin'>$product->name</h4> 
-                                        
+                                    <h4 class='nomargin'>$product->name</h4>   
                                 </div> 
                             </div> 
-                        </td> 
+                        </td>
+                        <td data-th='Size'>$product->size</td>
                         <td data-th='Price'>$detail->price đ</td> 
                         <td data-th='Quantity'><input productId='$detail->productId' class='form-control text-center amount-input' value='$detail->amount' type='number' min=1></td> 
                         <td data-th='Subtotal' class='text-center'>$subtotal đ</td> 

@@ -1,14 +1,15 @@
 <?php
+include_once './services/CagetoryService.php';
 include_once './services/ProductService.php';
 include_once './models/UserModel.php';
 include './prehandle/getCurrentUser.php';
 
 
 
-$DEFAULT_PAGING_LIMIT = 10; //so luong item moi trang
+$DEFAULT_PAGING_LIMIT = 5; //so luong item moi trang
 
-$NB_PAGE_SHOW = 10;
-
+$NB_PAGE_SHOW = 5;
+$list_cagetory = CagetoryService::findAll();
 
 if(isset($_GET['page'])&& isset($_GET['limit'])){
     $page = $_GET['page'];
@@ -24,8 +25,17 @@ if(isset($_GET['page'])&& isset($_GET['limit'])){
     $limit = $DEFAULT_PAGING_LIMIT;
 }
 
-$total_page =  ProductService:: findTotalPage($limit);
+if(isset($_GET['cagetory'])){
+    $cagetory_code = $_GET['cagetory'];
+    $list_product = ProductService::findAllByCagetoryLimit($cagetory_code,$page, $limit);
+    $total_page =  ProductService:: findTotalPageByCagetory($cagetory_code,$limit); //dem tong so trang tren so tong san phan grp by cagetory
+}else{
+    $list_product = ProductService::findAllLimit($page, $limit);
+    $total_page =  ProductService:: findTotalPage($limit);
+}
 
-$list_product = ProductService::findAllLimit($page, $limit);
+
+
+
 
 include './views/homepage.php';

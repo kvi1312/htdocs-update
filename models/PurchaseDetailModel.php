@@ -3,6 +3,7 @@ class PurchaseDetailModel {
    
     public $id;
     public $productId;
+    
     public $amount;
     public $price;
 
