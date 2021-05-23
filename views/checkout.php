@@ -15,18 +15,18 @@
 <body>
 
 <?php include dirname(__DIR__).'/views/common/header.php'; ?>
-
+<h2>Thanh toán giỏ hàng</h2>
 <div class=" container d-flex justify-content-center align-items-center pt-5 pb-5 accelerator"> 
     <form action="" method="POST">
-        <h1>Thanh toán giỏ hàng</h1>
+        
         <table id="cart" class="table table-hover table-condensed" style="background: rgb(223,255,255); background: linear-gradient(90deg, rgba(223,255,255,1) 10%, rgba(251,255,216,1) 76%); "> 
-            <thead></thead>
+            <thead>
                 <tr> 
-                    <th style="width:70%">Tên sản phẩm</th> 
-                    <th style="width:10%">Size</th>
-                    <th style="width:10%">Giá</th> 
-                    <th style="width:8%">Số lượng</th> 
-                    <th style="width:22%" class="text-center">Thành tiền</th> 
+                    <th >Tên sản phẩm</th> 
+                    <th >Size</th>
+                    <th>Giá</th> 
+                    <th >Số lượng</th> 
+                    
                 </tr> 
             </thead> 
 
@@ -49,7 +49,7 @@
                             <td data-th-'Size'>$product->size</td>
                             <td data-th='Price'>$detail->price VND</td> 
                             <td data-th='Quantity'>$detail->amount</td> 
-                            <td data-th='Subtotal' class='text-center'>$subtotal đ</td> 
+                            <td data-th='Subtotal'>$subtotal đ</td> 
                         </tr> ";
                     }
                 ?>

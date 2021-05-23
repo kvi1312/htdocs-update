@@ -7,7 +7,7 @@
                     <a class="brand" href="">
                         <img class="brand-logo-light" src="/htdocs-update/assert/lg.png" alt="" width="110px" height="110px">
                     </a>
-                    <p>Công ty TNHH MTV KL HighLand.</p>
+                    <p>Công ty TNHH MTV KLhub.</p>
                     <p>Chuyên cung cấp các loại sản phẩm giải khát chất lượng cao và đạt chuẩn yêu cầu bảo đảm vệ thực phẩm</p>
                     <!-- Rights-->
                     <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>

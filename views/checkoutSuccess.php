@@ -16,8 +16,37 @@
 
 <?php include dirname(__DIR__).'/views/common/header.php'; ?>
 
-<div class="container"> 
-    <h1>check out success</h1>
+<div class="container d-flex justify-content-center align-items-center">
+            
+        <table id="cart" class="table table-hover table-condensed" style="background: rgb(223,255,255); background: linear-gradient(90deg, rgba(223,255,255,1) 10%, rgba(251,255,216,1) 76%) width:60%;">
+            
+        <thead>
+            <tr class="container d-flex justify-content-center align-items-center">
+                    <th>
+                        <H2>THANH TOÁN THÀNH CÔNG</H2>
+                    </th> 
+                    </tr>  
+                
+            
+            </thead>
+
+            <tbody>
+                <tr class="container d-flex justify-content-center align-items-center">
+                    <td>
+                        Đơn hàng của quý khách đã được xác nhận, xin hãy chờ trong giây lát để tiếp nhận cuộc gọi xác nhận từ đội vận chuyển. Xin chân thành cảm ơn quý khách hàng ủng hộ KLhub!
+                    </td>      
+                </tr>
+
+                <tr class="container d-flex justify-content-center align-items-center">
+                    <td>
+                        <a href='/htdocs-update/index.php' class='btn btn-primary my-2 my-sm-0' type='button'><i class="fas fa-arrow-circle-left"></i>Quay Về Trang Chủ</a>
+                    </td>
+                </tr>
+
+            </tbody>
+
+
+        </table>
 </div>
 
 <?php include dirname(__DIR__).'/views/common/footer.php'; ?>
