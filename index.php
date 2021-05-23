@@ -6,9 +6,9 @@ include './prehandle/getCurrentUser.php';
 
 
 
-$DEFAULT_PAGING_LIMIT = 5; //so luong item moi trang
+$DEFAULT_PAGING_LIMIT = 6; //so luong item moi trang
 
-$NB_PAGE_SHOW = 5;
+$NB_PAGE_SHOW = 6;
 $list_cagetory = CagetoryService::findAll();
 
 if(isset($_GET['page'])&& isset($_GET['limit'])){

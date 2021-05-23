@@ -6,15 +6,15 @@
     </a>
     <div class="d-flex align-items-center">
         <!-- Menu Bar -->
-        <ul class="navbar-nav mr-auto font-size">
+        <ul class="navbar-nav mr-auto ">
             <li class="nav-item active mg-r">
-                <a class="nav-link" href="/htdocs-update/index.php" style="color:#3a0ca3;">TRANG CHỦ <span class="sr-only">(current)</span></a>
+                <a class="nav-link font-size" href="/htdocs-update/index.php" style="color:#3a0ca3;">TRANG CHỦ <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item mg-r">
-                <a class="nav-link" href="#" style="color:#3a0ca3;">KHUYẾN MÃI</a>
+                <a class="nav-link font-size" href="#" style="color:#3a0ca3;">KHUYẾN MÃI</a>
             </li>
             <li class="nav-item mg-r">
-                <a class="nav-link" href="#" style="color:#3a0ca3;">CHÍNH SÁCH</a>
+                <a class="nav-link font-size" href="#" style="color:#3a0ca3;">CHÍNH SÁCH</a>
             </li>
             </li>
         </ul>

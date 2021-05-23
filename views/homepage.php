@@ -58,7 +58,7 @@
                         }
                     ?>
 
-                <h3>Sắp Xếp Theo:</h3>
+                <!-- <h3>Sắp Xếp Theo:</h3>
                 <ul class="list-group mb-2 ml-2 ">
                     <li class="list-group-item check-cl">
                         <input type="radio" name="a" id="">
@@ -69,7 +69,7 @@
                         Bán Chạy
                     </li>
                 
-                </ul>
+                </ul> -->
 
             </div>
 

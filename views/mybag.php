@@ -14,7 +14,7 @@
 
     <?php include dirname(__DIR__).'/views/common/header.php'; ?>
 
-<div class="container d-flex justify-content-center align-items-center pt-5 pb-5 accelerator "> 
+<div class="container d-flex justify-content-center align-items-center pt-5 pb-5 accelerator w-100"> 
     <table id="cart" class="table table-hover table-condensed" style="background: rgb(223,255,255); background: linear-gradient(90deg, rgba(223,255,255,1) 10%, rgba(251,255,216,1) 76%);"> 
         <thead > 
             <tr> 

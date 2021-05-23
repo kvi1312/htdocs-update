@@ -14,6 +14,9 @@
 
 <body>
 
+<div id="notificationContainer" class="notification">
+</div>
+
 <?php include dirname(__DIR__).'/views/common/header.php'; ?>
 
 <main>
@@ -31,6 +34,10 @@
             </thead>
 
             <tbody>
+            <!-- <p>
+            <?php print_r($product); ?>
+        </p> -->
+
             <?php
                 foreach ($listSizeProduct as $product){
                     echo " <tr> 
@@ -50,9 +57,11 @@
                         <button productId='$product->id' class='btn btn-primary btn-add-to-cart'>Thêm vào giỏ</button>
                         </td>
                     </tr> ";
+                    
                 
                 }
         ?>
+        
             </tbody>
             </table>
             </div>
@@ -92,6 +101,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="/htdocs-update/script/common.js"></script>
 <script src="/htdocs-update/script/shopping-cart.js"></script>
+<script src="/htdocs-update/script/product-detail.js"></script>
 </body>
 
 </html>
